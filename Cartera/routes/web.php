@@ -16,3 +16,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('cartera',  'CarteraController@ObtenerTodo');
+$router->get('cartera/{id}', ['uses' => 'CarteraController@ObtenerUno']);
+$router->post('cartera', ['uses' => 'CarteraController@Crear']);
+$router->put('cartera/{id}', ['uses' => 'CarteraController@actualizar']);
+$router->delete('cartera/{id}', ['uses' => 'CarteraController@Deshabilitar']);

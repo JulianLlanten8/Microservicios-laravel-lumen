@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cartera;
-
+use App\Traits\ApiResponser;
+use Illuminate\Support\Facades\DB;
 /* 
     Crud de cartera
     * 1. ObtenerTodo
@@ -16,6 +17,11 @@ use App\Models\Cartera;
 
 class CarteraController extends Controller
 {
+    use ApiResponser;
+    function __construct()
+    {
+        //$this->middleware('auth');
+    }
     /**
      *Retorna la lista de la cartera
      *@return \Illuminate\Http\Response
@@ -50,6 +56,8 @@ class CarteraController extends Controller
         $cartera->save();
         return response()->json($cartera);
     }
+
+
     public function Deshabilitar(Request $request, int $id)
     {
         $cartera = Cartera::find($id);

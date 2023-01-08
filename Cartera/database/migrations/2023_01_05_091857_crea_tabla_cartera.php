@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-       
-        Schema::create('cartera', function (Blueprint $table) {
+
+        Schema::create('carteras', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('titulo');
             $table->timestamps(); //se crean las fechas de creacion y actualizacion
-            $table->softDeletes();//se crea la fecha de borrado
+            $table->softDeletes(); //se crea la fecha de borrado
         });
     }
 
