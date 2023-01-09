@@ -60,6 +60,8 @@ $app->singleton(
 */
 
 $app->configure('app');
+// establecer el idioma en español
+app('translator')->setLocale('es');
 
 /*
 |--------------------------------------------------------------------------
