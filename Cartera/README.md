@@ -16,7 +16,8 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 
 1.  `composer install`
 2.  `php artisan migrate:fresh --seed`
-3.  `php -S localhost:8080 -t ./public`
+3.  `php -S localhost:8080 -t ./public || php artisan serve <!-- Ejecuta el servidor -->`
+4.  `php artisan test`
 
 ## Official Documentation
 
